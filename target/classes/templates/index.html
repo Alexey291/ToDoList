@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru", xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>база данных </header>
+<nav>Заметки</nav>
+<div th:each="note : ${Database}">
+<a href="#" class="note-link" th:attr="data-id=${note.id}" th:text="${note.name}"></a>
+</div>
+</body>
+</html>
